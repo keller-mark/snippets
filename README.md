@@ -4,13 +4,13 @@ may or may not be relevant to others
 
 ## shell
 
-### O2 slurm: start an interactive job
+### start an interactive job with slurm on O2
 
 ```sh
-srun -p interactive --pty -t 8:00:00 -n 4 --mem 48G bash
+srun -p interactive --pty -t 8:00:00 -n 4 --mem 16G bash
 ```
 
-### curl: download a file
+### download a file with curl
 
 ```sh
 curl -L -o {output} {file_url}
