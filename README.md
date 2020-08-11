@@ -16,3 +16,16 @@ srun -p interactive --pty -t 8:00:00 -n 4 --mem 16G bash
 curl -L -o {output} {file_url}
 ```
 
+### tar.gz a directory
+
+```sh
+tar -cvzf dir.tar.gz dir/
+```
+
+### un-tar.gz a file
+
+```sh
+tar -xvzf dir.tar.gz
+# or
+tar -xvzf dir.tar.gz -C dest_dir
+```
