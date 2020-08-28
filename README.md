@@ -29,3 +29,10 @@ tar -xvzf dir.tar.gz
 # or
 tar -xvzf dir.tar.gz -C dest_dir
 ```
+
+### serve a local directory over HTTP
+
+```sh
+# brew install http-server
+http-server --cors='*' --port 8000 .
+```
