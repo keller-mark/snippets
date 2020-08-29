@@ -54,3 +54,9 @@ conda env update -f environment.yml
 ```sh
 conda env remove -n ENV_NAME
 ```
+
+### revert to a particular git commit
+
+```sh
+git revert --no-commit b960c8e5..HEAD
+```
