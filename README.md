@@ -43,7 +43,7 @@ http-server --cors='*' --port 8000 .
 conda env create -f environment.yml
 ```
 
-### create conda env
+### update conda env
 
 ```sh
 conda env update -f environment.yml
