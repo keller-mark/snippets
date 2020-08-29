@@ -36,3 +36,21 @@ tar -xvzf dir.tar.gz -C dest_dir
 # brew install http-server
 http-server --cors='*' --port 8000 .
 ```
+
+### create conda env
+
+```sh
+conda env create -f environment.yml
+```
+
+### create conda env
+
+```sh
+conda env update -f environment.yml
+```
+
+### remove conda env
+
+```sh
+conda env remove -n ENV_NAME
+```
