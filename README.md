@@ -43,6 +43,12 @@ http-server --cors='*' --port 8000 .
 conda env create -f environment.yml
 ```
 
+### create conda env without environment file
+
+```sh
+conda create -n NAME python=3.7
+```
+
 ### update conda env
 
 ```sh
@@ -52,7 +58,7 @@ conda env update -f environment.yml
 ### remove conda env
 
 ```sh
-conda env remove -n ENV_NAME
+conda env remove -n NAME
 ```
 
 ### revert to a particular git commit
