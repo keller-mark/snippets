@@ -66,3 +66,18 @@ conda env remove -n NAME
 ```sh
 git revert --no-commit b960c8e5..HEAD
 ```
+
+### authorize a [direnv](https://github.com/direnv/direnv)
+
+```sh
+direnv allow .
+```
+
+### create a [direnv](https://github.com/direnv/direnv) for conda
+
+in `.envrc`
+
+```sh
+use conda NAME
+```
+
