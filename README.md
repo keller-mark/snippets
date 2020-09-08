@@ -81,3 +81,8 @@ in `.envrc`
 use conda NAME
 ```
 
+### install a LaTeX package from CTAN with tlmgr
+
+```sh
+tlmgr install chemfig
+```
