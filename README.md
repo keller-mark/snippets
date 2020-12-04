@@ -86,3 +86,14 @@ use conda NAME
 ```sh
 tlmgr install chemfig
 ```
+
+## personal O2 things
+
+```sh
+ssh me@o2.hms.harvard.edu
+ssh login01
+tmux
+source ~/.bashrc_mark
+ssh-add ~/.ssh/id_rsa_github
+```
+
