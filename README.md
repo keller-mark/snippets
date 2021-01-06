@@ -97,3 +97,33 @@ source ~/.bashrc_mark
 ssh-add ~/.ssh/id_rsa_github
 ```
 
+## altair
+
+### chloropleth: joining on state name
+
+```python
+import altair as alt
+from vega_datasets import data
+
+state_df = pd.read_csv(data.population_engineers_hurricanes.url)
+state_to_id = dict(zip(state_df["state"].values.tolist(), state_df["id"].values.tolist()))
+
+# df is some dataframe with column 'my_field'
+df["id"] = df["state"].apply(lambda x: state_to_id[x])
+
+states = alt.topo_feature(data.us_10m.url, 'states')
+
+
+plot = alt.Chart(states).mark_geoshape().encode(
+    color=alt.Color("my_field:N")
+).transform_lookup(
+    lookup='id',
+    from_=alt.LookupData(data=df, key='id', fields=['my_field'])
+).properties(
+    width=500,
+    height=300
+).project(
+    type='albersUsa'
+)
+plot
+```
