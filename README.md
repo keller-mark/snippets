@@ -99,7 +99,7 @@ ssh-add ~/.ssh/id_rsa_github
 
 ## altair
 
-### chloropleth: joining on state name
+### choropleth: joining on state name
 
 ```python
 import altair as alt
