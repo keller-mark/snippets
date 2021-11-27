@@ -67,6 +67,12 @@ conda env remove -n NAME
 git revert --no-commit b960c8e5..HEAD
 ```
 
+### change git case sensitivity
+
+```sh
+git config core.ignorecase false
+```
+
 ### authorize a [direnv](https://github.com/direnv/direnv)
 
 ```sh
