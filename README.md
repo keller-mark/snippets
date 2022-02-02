@@ -40,6 +40,12 @@ http-server --cors='*' --port 8000 .
 ### create conda env
 
 ```sh
+mamba env create -f environment.yml
+```
+
+or
+
+```sh
 conda env create -f environment.yml
 ```
 
@@ -50,6 +56,12 @@ conda create -n NAME python=3.7
 ```
 
 ### update conda env
+
+```sh
+mamba env update -f environment.yml
+```
+
+or
 
 ```sh
 conda env update -f environment.yml
