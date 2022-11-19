@@ -105,6 +105,12 @@ use conda NAME
 tlmgr install chemfig
 ```
 
+### convert mov to gif
+
+```
+ffmpeg -i input.mov -r 10 -pix_fmt rgb24 output.gif
+```
+
 ## personal O2 things
 
 ```sh
@@ -113,12 +119,6 @@ ssh login01
 tmux
 source ~/.bashrc_mark
 ssh-add ~/.ssh/id_rsa_github
-```
-
-### convert mov to gif
-
-```
-ffmpeg -i input.mov -r 10 -pix_fmt rgb24 output.gif
 ```
 
 ## altair
