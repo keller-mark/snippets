@@ -121,6 +121,14 @@ source ~/.bashrc_mark
 ssh-add ~/.ssh/id_rsa_github
 ```
 
+### serve directory of files
+
+```sh
+ssh -L O2_PORT:127.0.0.1:LOCAL_PORT me@o2.hms.harvard.edu
+ssh -L O2_PORT:127.0.0.1:O2_PORT login01
+srun -t 0-3:00 --pty -p interactive --tunnel O2_PORT:O2_PORT /bin/bash
+```
+
 ### tmux
 
 #### list
