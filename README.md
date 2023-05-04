@@ -121,6 +121,24 @@ source ~/.bashrc_mark
 ssh-add ~/.ssh/id_rsa_github
 ```
 
+### tmux
+
+#### list
+
+```sh
+tmux ls
+```
+
+#### attach to existing session 0
+
+```sh
+tmux a -t 0
+```
+
+#### detach from session
+
+<kbd>CTRL</kbd>+<kbd>B</kbd> <kbd>D</kbd>
+
 ## altair
 
 ### choropleth: joining on state name
