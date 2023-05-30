@@ -14,6 +14,9 @@ srun -p interactive --pty -t 8:00:00 -n 4 --mem 16G bash
 
 ```sh
 curl -L -o {output} {file_url}
+
+# put quotes around file_url if it has characters that might be misinterpreted by the shell (e.g., '&')
+curl -L -o {output} "{file_url}"
 ```
 
 ### tar.gz a directory
