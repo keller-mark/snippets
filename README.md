@@ -107,8 +107,15 @@ tlmgr install chemfig
 
 ### convert mov to gif
 
-```
+```sh
 ffmpeg -i input.mov -r 10 -pix_fmt rgb24 output.gif
+```
+
+### checkout a single file from another git branch
+
+```sh
+# For example, if we want `some-file.js` from the `main` branch
+git checkout main -- some-file.js
 ```
 
 ## personal O2 things
