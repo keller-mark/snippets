@@ -30,6 +30,12 @@ tar -xvzf dir.tar.gz
 tar -xvzf dir.tar.gz -C dest_dir
 ```
 
+### un-gz a file
+
+```sh
+gunzip -c {input} > {output}
+```
+
 ### serve a local directory over HTTP
 
 ```sh
