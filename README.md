@@ -147,6 +147,12 @@ srun -t 0-3:00 --pty -p interactive --tunnel O2_PORT:O2_PORT /bin/bash
 http-server --cors='*' --port O2_PORT .
 ```
 
+### pip install from a github branch with extras_require
+
+```sh
+pip install 'vitessce[all] @ git+https://github.com/vitessce/vitessce-python@main'
+pip install 'SomePackage[PDF] @ git+https://git.repo/SomePackage@main#subdirectory=subdir_path'
+```
 ### tmux
 
 #### list
