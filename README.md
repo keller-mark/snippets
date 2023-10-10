@@ -61,7 +61,7 @@ conda env create -f environment.yml
 ### create conda env without environment file
 
 ```sh
-conda create -n NAME python=3.7
+conda create -n NAME python=3.11
 ```
 
 ### update conda env
