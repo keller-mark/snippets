@@ -30,6 +30,23 @@ http-server --cors='*' --port O2_PORT .
 srun -p interactive --pty -t 8:00:00 -n 4 --mem 16G bash
 ```
 
+### run snakemake with time-based rerun triggers
+
+```sh
+snakemake -j 1 --rerun-triggers mtime
+```
+
+### copy a local directory to google cloud storage
+
+This will create a copy at `gs://{bucket}/{path}/local_dir`
+
+```sh
+gcloud auth login
+gsutil -m cp -r ./local_dir gs://{bucket}/{path}
+```
+
+
+
 ### download a file with curl
 
 ```sh
