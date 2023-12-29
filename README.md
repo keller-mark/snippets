@@ -190,6 +190,96 @@ tmux a -t 0
 
 ## altair
 
+### basics
+
+```python
+plot = alt.Chart(df).mark_bar().encode(
+    x=alt.X("x_colname:N"),
+    y=alt.Y("y_colname:Q"),
+    color=alt.Color("color_colname:N"),
+).properties(
+    width=200,
+    height=200
+)
+
+plot.save("my_plot.png")
+plot.save("my_plot.svg)
+
+plot
+```
+
+### title and subtitle
+
+```python
+# ...
+).properties(
+    title={
+        "text": "Title here",
+        "subtitle": "Subtitle here",
+        "fontSize": 16,
+        "fontWeight": 500,
+        "subtitleColor": "black",
+        "subtitleFontSize": 12
+    }
+)
+```
+
+### sorting/ordering things
+
+```python
+    # x, y, color, etc.
+    x=alt.X("x_colname:N", scale=alt.Scale(domain=sorted_x_vals)),
+    # row, column
+    row=alt.Row("row_colname:N", sort=sorted_row_vals),
+```
+
+### axis titles
+
+```python
+    # x, y, etc.
+    x=alt.X("x_colname:N", axis=alt.Axis(title="Title Here")),
+    # color
+    color=alt.Color("color_colname:N", legend=alt.Legend(title="Title Here")),
+    # row, column
+    row=alt.Row("row_colname:N", header=alt.Header(title="Title Here")),
+```
+
+### using row/column with errorbar/errorband
+
+layer first, then facet
+
+```python
+base = alt.Chart(df)
+
+lines = base.mark_line(point=True).encode(
+    x=alt.X("year:O", axis=alt.Axis(title="Year")),
+    y=alt.Y("percent:Q"),
+    color=alt.Color("method_or_other:N")
+).properties(
+    height=200,
+    width=800
+)
+
+error_bands = base.mark_errorband().encode(
+    x=alt.X("year:O"),
+    y=alt.Y("pct_lower:Q", axis=alt.Axis(title="Percent")),
+    y2=alt.Y2("pct_upper:Q"),
+    color=alt.Color("method_or_other:N")
+)
+
+alt.layer(lines, error_bands, data=df).facet(
+    row=alt.Row(
+        "field:N",
+        sort=sorted_field_df.index.tolist(),
+        header=alt.Header(
+            title="Subject Area",
+            labelAngle=0,
+            labelAlign="left",
+        )
+    )
+)
+```
+
 ### choropleth: joining on state name
 
 ```python
