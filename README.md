@@ -45,8 +45,6 @@ gcloud auth login
 gsutil -m cp -r ./local_dir gs://{bucket}/{path}
 ```
 
-
-
 ### download a file with curl
 
 ```sh
@@ -117,6 +115,12 @@ conda env update -f environment.yml
 
 ```sh
 conda env remove -n NAME
+```
+
+### symlink a file or directory
+
+```sh
+ln -s /path/to/reference-file symlink-file
 ```
 
 ### revert to a particular git commit
