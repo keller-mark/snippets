@@ -36,6 +36,13 @@ srun -p interactive --pty -t 8:00:00 -n 4 --mem 16G bash
 snakemake -j 1 --rerun-triggers mtime
 ```
 
+
+### run snakemake with time-based rerun triggers on a cluster filesystem
+
+```sh
+snakemake -j 1 --rerun-triggers mtime --latency-wait 30
+```
+
 ### copy a local directory to google cloud storage
 
 This will create a copy at `gs://{bucket}/{path}/local_dir`
