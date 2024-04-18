@@ -52,6 +52,13 @@ gcloud auth login
 gsutil -m cp -r ./local_dir gs://{bucket}/{path}
 ```
 
+### copy from google cloud storage bucket to local
+
+```sh
+gcloud auth login
+gsutil -m cp -r gs://{bucket}/{path} ./local_dir
+```
+
 ### download a file with curl
 
 ```sh
