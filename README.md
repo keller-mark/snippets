@@ -115,6 +115,15 @@ conda env create -f environment.yml
 conda create -n NAME python=3.11
 ```
 
+### create conda env for R
+
+```sh
+conda config --add channels r
+conda create -n NAME
+conda activate NAME
+conda install r-base r-essentials r-irkernel
+```
+
 ### update conda env
 
 ```sh
