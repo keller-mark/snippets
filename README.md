@@ -30,6 +30,13 @@ http-server --cors='*' --port O2_PORT .
 srun -p interactive --pty -t 8:00:00 -n 4 --mem 16G bash
 ```
 
+### start an interactive job with slurm on O2 with 1 GPU
+
+```sh
+srun -p gpu --gres=gpu:1 --pty -t 8:00:00 -n 4 --mem 16G bash
+module load gcc/9.2.0 cuda/11.7 # Needs same version of CUDA that was installed into Python environment
+```
+
 ### run snakemake with time-based rerun triggers
 
 ```sh
