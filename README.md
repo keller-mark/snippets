@@ -149,6 +149,12 @@ conda env update -f environment.yml
 conda env remove -n NAME
 ```
 
+### update conda version
+
+```sh
+conda update -n base conda
+```
+
 ### symlink a file or directory
 
 ```sh
