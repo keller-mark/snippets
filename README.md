@@ -122,6 +122,20 @@ conda env create -f environment.yml
 conda create -n NAME python=3.11
 ```
 
+### create conda env in particular directory
+
+```sh
+conda create --prefix=/path/to/envs/env_name python=3.11
+conda config --append envs_dirs /path/to/envs
+```
+
+### configure mamba as conda solver
+
+```sh
+conda install -n base conda-libmamba-solver
+conda config --set solver libmamba
+```
+
 ### create conda env for R
 
 ```sh
