@@ -226,6 +226,14 @@ git checkout main -- some-file.js
 pip install 'vitessce[all] @ git+https://github.com/vitessce/vitessce-python@main'
 pip install 'SomePackage[PDF] @ git+https://git.repo/SomePackage@main#subdirectory=subdir_path'
 ```
+
+### check version of installed python package
+
+```sh
+from importlib.metadata import version
+version('package_name')
+```
+
 ### tmux
 
 #### list
