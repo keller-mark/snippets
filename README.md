@@ -229,7 +229,7 @@ pip install 'SomePackage[PDF] @ git+https://git.repo/SomePackage@main#subdirecto
 
 ### check version of installed python package
 
-```sh
+```python
 from importlib.metadata import version
 version('package_name')
 ```
