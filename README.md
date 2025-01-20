@@ -234,6 +234,12 @@ from importlib.metadata import version
 version('package_name')
 ```
 
+### use `ripgrep` to find all cited bibtex keys
+
+```sh
+rg '\\cite\{([\w,]+)\}' -g '*.tex' -r '$1' --only-matching -N -I
+```
+
 ### tmux
 
 #### list
