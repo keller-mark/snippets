@@ -240,6 +240,12 @@ version('package_name')
 rg '\\cite\{([\w,]+)\}' -g '*.tex' -r '$1' --only-matching -N -I
 ```
 
+### install `numba` with `uv`
+
+```sh
+uv add --no-build-package numba numba
+```
+
 ### tmux
 
 #### list
