@@ -260,6 +260,12 @@ tmux ls
 tmux a -t 0
 ```
 
+#### attach to existing session 0, read-only
+
+```sh
+tmux a -t 0 -r
+```
+
 #### detach from session
 
 <kbd>CTRL</kbd>+<kbd>B</kbd> <kbd>D</kbd>
