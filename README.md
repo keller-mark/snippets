@@ -129,6 +129,13 @@ conda create --prefix=/path/to/envs/env_name python=3.11
 conda config --append envs_dirs /path/to/envs
 ```
 
+### list conda envs
+
+```sh
+conda info --envs
+```
+
+
 ### configure mamba as conda solver
 
 ```sh
