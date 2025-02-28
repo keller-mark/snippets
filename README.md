@@ -253,6 +253,16 @@ rg '\\cite\{([\w,]+)\}' -g '*.tex' -r '$1' --only-matching -N -I
 uv add --no-build-package numba numba
 ```
 
+### convert an OME-TIFF to a pyramidal OME-TIFF
+
+```sh
+export INPUT_TIFF=./image.ome.tiff
+export OUTPUT_TIFF=./image.pyramid.ome.tiff
+bioformats2raw/bin/bioformats2raw $INPUT_TIFF ./intermediate.zarr --resolutions 6 --series 0
+raw2ometiff/bin/raw2ometiff ./intermediate.zarr $OUTPUT_TIFF --compression LZW
+generate_tiff_offsets --input_file $OUTPUT_TIFF
+```
+
 ### tmux
 
 #### list
