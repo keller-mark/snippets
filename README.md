@@ -258,8 +258,8 @@ uv add --no-build-package numba numba
 ```sh
 export INPUT_TIFF=./image.ome.tiff
 export OUTPUT_TIFF=./image.pyramid.ome.tif
-bioformats2raw/bin/bioformats2raw $INPUT_TIFF ./intermediate.zarr --resolutions 6 --series 0
-raw2ometiff/bin/raw2ometiff ./intermediate.zarr $OUTPUT_TIFF --compression LZW
+bioformats2raw $INPUT_TIFF ./intermediate.zarr --resolutions 6 --series 0
+raw2ometiff ./intermediate.zarr $OUTPUT_TIFF --compression LZW
 generate_tiff_offsets --input_file $OUTPUT_TIFF
 ```
 
