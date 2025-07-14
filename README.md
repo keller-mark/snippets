@@ -71,7 +71,7 @@ gsutil -m cp -r gs://{bucket}/{path}/remote_dir .
 ### copy a local directory to AWS S3 bucket
 
 ```sh
-aws s3 cp ./local_dir s3://{bucket}/{path} --recursive
+aws s3 cp ./local_dir s3://{bucket}/{path}/local_dir --recursive
 ```
 
 
