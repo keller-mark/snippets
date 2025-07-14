@@ -279,6 +279,18 @@ raw2ometiff ./intermediate.zarr $OUTPUT_TIFF --compression LZW
 generate_tiff_offsets --input_file $OUTPUT_TIFF
 ```
 
+### crop a SpatialData object
+
+```py
+cropped_sdata = sdata.query.bounding_box(
+    axes=["x", "y"],
+    min_coordinate=[1000, 3000],
+    max_coordinate=[1250, 3250],
+    target_coordinate_system="global",
+    #filter_table=False
+)
+```
+
 ### tmux
 
 #### list
