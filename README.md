@@ -68,6 +68,22 @@ gcloud auth login
 gsutil -m cp -r gs://{bucket}/{path}/remote_dir .
 ```
 
+### copy a local directory to AWS S3 bucket
+
+```sh
+aws s3 cp ./local_dir s3://{bucket}/{path} --recursive
+```
+
+
+### copy from AWS S3 bucket to local
+
+
+```sh
+aws s3 cp s3://{bucket}/{path}/remote_dir . --recursive
+```
+
+
+
 ### download a file with curl
 
 ```sh
