@@ -120,6 +120,12 @@ gunzip -c {input} > {output}
 http-server --cors='*' --port 8000 .
 ```
 
+### create a uv project with a specific python version
+
+```sh
+uv init --python 3.11
+```
+
 ### create conda env
 
 ```sh
