@@ -323,6 +323,12 @@ tmux a -t 0 -r
 
 ## altair
 
+### disable max rows
+
+```py
+alt.data_transformers.disable_max_rows()
+```
+
 ### basics
 
 ```python
