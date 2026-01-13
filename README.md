@@ -321,6 +321,10 @@ tmux a -t 0 -r
 
 <kbd>CTRL</kbd>+<kbd>B</kbd> <kbd>D</kbd>
 
+#### scroll within session
+
+<kbd>CTRL</kbd>+<kbd>B</kbd> <kbd>[</kbd>
+
 ## altair
 
 ### disable max rows
