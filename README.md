@@ -4,7 +4,7 @@ may or may not be relevant to others
 
 ## shell
 
-## personal O2 things
+### personal O2 things
 
 ```sh
 ssh me@o2.hms.harvard.edu
@@ -324,6 +324,35 @@ tmux a -t 0 -r
 #### scroll within session
 
 <kbd>CTRL</kbd>+<kbd>B</kbd> <kbd>[</kbd>
+
+## latex
+
+### Custom commands
+
+```tex
+\usepackage{minted}
+\usepackage{listings}
+\usepackage{xspace}
+%\usepackage{longtable}
+
+\newcommand{\msk}[1]{{\textcolor{red}{ Mark: #1}}}
+\newcommand{\maybe}[1]{{\textcolor{red}{#1}}}
+
+% Add a period to the end of an abbreviation unless there's one
+% already, then \xspace.
+% Reference: https://stackoverflow.com/a/39363004
+\makeatletter
+\DeclareRobustCommand\onedot{\futurelet\@let@token\@onedot}
+\def\@onedot{\ifx\@let@token.\else.\null\fi\xspace}
+
+\def\eg{\emph{e.g}\onedot} \def\Eg{\emph{E.g}\onedot}
+\def\ie{\emph{i.e}\onedot} \def\Ie{\emph{I.e}\onedot}
+\def\cf{\emph{c.f}\onedot} \def\Cf{\emph{C.f}\onedot}
+\def\etc{\emph{etc}\onedot} \def\vs{\emph{vs}\onedot}
+\def\wrt{w.r.t\onedot} \def\dof{d.o.f\onedot}
+\def\etal{\emph{et al}\onedot}
+\makeatother
+```
 
 ## altair
 
