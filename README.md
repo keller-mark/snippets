@@ -126,6 +126,13 @@ http-server --cors='*' --port 8000 .
 uv init --python 3.11
 ```
 
+### create a python script with inline UV metadata
+
+```sh
+uv init --script example.py --python 3.12
+uv add --script example.py 'requests<3' 'rich'
+```
+
 ### create conda env
 
 ```sh
