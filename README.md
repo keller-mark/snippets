@@ -304,6 +304,19 @@ cropped_sdata = sdata.query.bounding_box(
 )
 ```
 
+### run pytest and include print statement output
+
+```sh
+pytest --capture=no
+```
+
+
+### run pytest in verbose mode
+
+```sh
+pytest -vv
+```
+
 ### tmux
 
 #### list
